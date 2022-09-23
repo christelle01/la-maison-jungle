@@ -8,7 +8,7 @@ function Cart({ cart, updateCart }) {
 		0
 	)
 	useEffect(() => {
-		document.title = `LMJ: ${total}€ d'achats`
+		document.title = `Authentique Jardin: ${total}F d'achats`
 	}, [total])
 
 	return isOpen ? (
@@ -25,11 +25,11 @@ function Cart({ cart, updateCart }) {
 					<ul>
 						{cart.map(({ name, price, amount }, index) => (
 							<div key={`${name}-${index}`}>
-								{name} {price}€ x {amount}
+								{name} {price} F x {amount}
 							</div>
 						))}
 					</ul>
-					<h3>Total :{total}€</h3>
+					<h3>Total :{total} F</h3>
 					<button onClick={() => updateCart([])}>Vider le panier</button>
 				</div>
 			) : (
